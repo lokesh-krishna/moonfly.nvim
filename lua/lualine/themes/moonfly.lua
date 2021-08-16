@@ -5,40 +5,61 @@
 
 -- LuaFormatter off
 local colors = {
-	red	= '#ff5454',
-	green	= '#8cc85f',
-	yellow	= '#e3c78a',
-	blue	= '#80a0ff',
-	purple	= '#d183e8',
-	cyan	= '#79dac8',
-	black	= '#080808',
-	white	= '#b2b2b2',
-	bright_red	= '#ff5189',
-	grey	= '#303030',
+	blue		= '#80a0ff',
+	cyan		= '#79dac8',
+	black		= '#080808',
+	white		= '#b2b2b2',
+	red		= '#ff5189',
+	violet		= '#d183e8',
+	grey		= '#323437',
+	dark_grey	= '#1c1c1c',
 }
 
 -- LuaFormatter on
 return {
-  replace = {
-    a = {fg = colors.black, bg = colors.bright_red, gui = 'bold'},
-    b = {fg = colors.white, bg = colors.grey}
-  },
-  inactive = {
-    a = {fg = colors.white, bg = colors.grey, gui = 'bold'},
-    b = {fg = colors.white, bg = colors.grey},
-    c = {fg = colors.white, bg = colors.grey}
-  },
-  normal = {
-    a = {fg = colors.black, bg = colors.purple, gui = 'bold'},
-    b = {fg = colors.white, bg = colors.grey},
-    c = {fg = colors.white, bg = colors.grey}
-  },
-  visual = {
-    a = {fg = colors.black, bg = colors.cyan, gui = 'bold'},
-    b = {fg = colors.white, bg = colors.grey}
-  },
-  insert = {
-    a = {fg = colors.black, bg = colors.blue, gui = 'bold'},
-    b = {fg = colors.white, bg = colors.grey}
-  }
+	normal = {
+		a = {fg = colors.black, bg = colors.violet, gui = 'bold'},
+		b = {fg = colors.white, bg = colors.grey},
+		c = {fg = colors.white, bg = colors.dark_grey},
+		x = {fg = colors.white, bg = colors.dark_grey},
+		y = {fg = colors.white, bg = colors.grey},
+		z = {fg = colors.black, bg = colors.violet},
+	},
+
+	insert = {
+		a = {fg = colors.black, bg = colors.blue, gui = 'bold'},
+		b = {fg = colors.white, bg = colors.grey},
+		c = {fg = colors.white, bg = colors.dark_grey},
+		x = {fg = colors.white, bg = colors.dark_grey},
+		y = {fg = colors.white, bg = colors.grey},
+		z = {fg = colors.black, bg = colors.blue},
+	},
+
+	visual = {
+		a = {fg = colors.black, bg = colors.cyan, gui = 'bold'},
+		b = {fg = colors.white, bg = colors.grey},
+		c = {fg = colors.white, bg = colors.dark_grey},
+		x = {fg = colors.white, bg = colors.dark_grey},
+		y = {fg = colors.white, bg = colors.grey},
+		z = {fg = colors.black, bg = colors.cyan},
+	},
+
+	replace = {
+		a = {fg = colors.black, bg = colors.red, gui = 'bold'},
+		b = {fg = colors.white, bg = colors.grey},
+		c = {fg = colors.white, bg = colors.dark_grey},
+		x = {fg = colors.white, bg = colors.dark_grey},
+		y = {fg = colors.white, bg = colors.grey},
+		z = {fg = colors.black, bg = colors.red},
+	},
+
+	inactive = {
+		a = {fg = colors.white, bg = colors.grey, gui = 'bold'},
+		b = {fg = colors.white, bg = colors.grey},
+		c = {fg = colors.white, bg = colors.dark_grey},
+		x = {fg = colors.white, bg = colors.dark_grey},
+    	y = {fg = colors.white, bg = colors.grey},
+		z = {fg = colors.white, bg = colors.grey},
+  	}
 }
+
