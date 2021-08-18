@@ -11,7 +11,7 @@ local colors = {
 	white		= '#b2b2b2',
 	red		= '#ff5189',
 	violet		= '#d183e8',
-	grey		= '#323437',
+	grey		= '#303030',
 	dark_grey	= '#1c1c1c',
 }
 
