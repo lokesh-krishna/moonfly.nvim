@@ -236,8 +236,8 @@ exec 'highlight WarningMsg ctermbg=bg ctermfg=' . s:orange.term . ' guibg=bg gui
 " Auto-text-completion menu
 exec 'highlight Pmenu ctermbg=' . s:grey235.term . ' ctermfg=fg guibg=' . s:grey234.hex . ' guifg=fg'
 exec 'highlight PmenuSel ctermbg=' . s:wheat.term . ' ctermfg=' . s:grey236.term . ' guibg=' . s:violet.hex . ' guifg=' . s:grey236.hex
-exec 'highlight PmenuSbar ctermbg=' . s:grey235.term . ' guibg=' . s:grey234.hex
-exec 'highlight PmenuThumb ctermbg=' . s:grey244.term . ' guibg=' . s:grey235.hex
+exec 'highlight PmenuSbar ctermbg=' . s:grey235.term . ' guibg=' . s:grey236.hex
+exec 'highlight PmenuThumb ctermbg=' . s:grey244.term . ' guibg=' . s:grey241.hex
 exec 'highlight WildMenu ctermbg=' . s:wheat.term . ' ctermfg=' . s:grey236.term . ' guibg=' . s:violet.hex . ' guifg=' . s:grey234.hex
 
 " Spelling errors
