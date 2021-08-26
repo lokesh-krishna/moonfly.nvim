@@ -1,7 +1,5 @@
 " Dark Vim/Neovim color scheme.
 "
-" Note: Inspiration taken from: monokai, sunburst xoria256 and One Dark themes.
-"
 " URL:     github.com/bluz71/vim-moonfly-colors
 " License: MIT (https://opensource.org/licenses/MIT)
 
@@ -114,6 +112,7 @@ exec 'highlight MoonflyReset ctermfg=fg guifg=fg'
 exec 'highlight MoonflyVisual ctermbg=' . s:grey0.term . ' guibg=' . s:grey236.hex
 exec 'highlight MoonflyWhite ctermfg=' . s:white.term . ' guifg=' . s:white.hex
 exec 'highlight MoonflyGrey0 ctermfg=' . s:grey0.term . ' guifg=' . s:grey0.hex
+exec 'highlight MoonflyGrey249 ctermfg=' . s:grey249.term . ' guifg=' . s:grey249.hex
 exec 'highlight MoonflyGrey247 ctermfg=' . s:grey247.term . ' guifg=' . s:grey247.hex
 exec 'highlight MoonflyGrey246 ctermfg=' . s:grey246.term . ' guifg=' . s:grey246.hex
 exec 'highlight MoonflyGrey241 ctermfg=' . s:grey241.term . ' guifg=' . s:grey241.hex
@@ -293,6 +292,8 @@ if has('nvim')
     exec 'highlight TermCursor ctermbg=' . s:grey247.term . ' ctermfg=bg cterm=none guibg=' . s:grey247.hex . ' guifg=bg gui=none'
     if g:moonflyNormalFloat
         exec 'highlight NormalFloat ctermbg=bg ctermfg=' . s:grey249.term . ' guibg=bg guifg=' . s:grey249.hex
+    else
+        exec 'highlight NormalFloat ctermbg=' . s:grey234.term . ' ctermfg=fg guibg=' . s:grey234.hex . ' guifg=fg'
     endif
     exec 'highlight FloatBorder ctermbg=bg ctermfg=' . s:grey236.term . ' guibg=bg guifg=' . s:grey236.hex
 
@@ -695,7 +696,7 @@ highlight! link TagbarVisibilityPrivate MoonflyLime
 highlight! link TagbarKind MoonflyEmerald
 
 " NERDTree plugin
-highlight! link NERDTreeClosable MoonflyGreen
+highlight! link NERDTreeClosable MoonflyEmerald
 highlight! link NERDTreeCWD MoonflyPurple
 highlight! link NERDTreeDir MoonflySky
 highlight! link NERDTreeDirSlash MoonflyCranberry
@@ -705,9 +706,15 @@ highlight! link NERDTreeHelp MoonflyGrey247
 highlight! link NERDTreeLinkDir MoonflyBlue
 highlight! link NERDTreeLinkFile MoonflyBlue
 highlight! link NERDTreeLinkTarget MoonflyTurquoise
+<<<<<<< HEAD
 highlight! link NERDTreeOpenable MoonflyGreen
 highlight! link NERDTreePart MoonflyGrey236
 highlight! link NERDTreePartFile MoonflyGrey236
+=======
+highlight! link NERDTreeOpenable MoonflyEmerald
+highlight! link NERDTreePart MoonflyGrey0
+highlight! link NERDTreePartFile MoonflyGrey0
+>>>>>>> 7f2713a6058cc354cc7b48af3450db5e232fd5d3
 highlight! link NERDTreeUp MoonflyBlue
 
 " NERDTree Git plugin
@@ -718,10 +725,10 @@ highlight! link NERDTreeGitStatusStaged MoonflySky
 highlight! link NERDTreeGitStatusUntracked MoonflyRed
 
 " fern.vim plugin
-highlight! link FernBranchSymbol MoonflyGreen
+highlight! link FernBranchSymbol MoonflyEmerald
 highlight! link FernBranchText MoonflyBlue
-highlight! link FernMarkedLine MoonflyCoral
-highlight! link FernMarkedText MoonflyCoral
+highlight! link FernMarkedLine MoonflyYellow
+highlight! link FernMarkedText MoonflyCrimson
 highlight! link FernRootSymbol MoonflyPurple
 highlight! link FernRootText MoonflyPurple
 
@@ -838,22 +845,36 @@ if has('nvim')
     highlight! link LspDiagnosticsFloatingHint MoonflyWhite
     highlight! link LspSignatureActiveParameter MoonflyGrey236
 
-    " nvim-tree.lua plugin
-    highlight! link NvimTreeFolderIcon MoonflyGrey247
+    " NvimTree plugin
+    highlight! link NvimTreeFolderIcon MoonflyBlue
     highlight! link NvimTreeFolderName MoonflyBlue
-    highlight! link NvimTreeIndentMarker MoonflyGrey247
+    highlight! link NvimTreeIndentMarker MoonflyGrey236
     highlight! link NvimTreeOpenedFolderName MoonflyBlue
     highlight! link NvimTreeRootFolder MoonflyPurple
     highlight! link NvimTreeSpecialFile MoonflyYellow
-    highlight! link NvimTreeWindowPicker DiffText
+    highlight! link NvimTreeWindowPicker DiffChange
+    exec 'highlight NvimTreeExecFile ctermfg=' . s:green.term . ' guifg=' . s:green.hex . ' gui=none'
+    exec 'highlight NvimTreeImageFile ctermfg=' . s:violet.term . ' guifg=' . s:violet.hex . ' gui=none'
+    exec 'highlight NvimTreeOpenedFile ctermfg=' . s:yellow.term . ' guifg=' . s:yellow.hex . ' gui=none'
+    exec 'highlight NvimTreeSymlink ctermfg=' . s:turquoise.term . ' guifg=' . s:turquoise.hex . ' gui=none'
 
-    " telescope.nvim plugin
+    " Telescope plugin
     highlight! link TelescopeBorder MoonflyGrey236
     highlight! link TelescopeMatching MoonflyCoral
     highlight! link TelescopeMultiSelection MoonflyCrimson
+    highlight! link TelescopeNormal MoonflyGrey249
     highlight! link TelescopePreviewMatch MoonflyVisual
+<<<<<<< HEAD
     highlight! link TelescopePromptPrefix MoonflyViolet
     highlight! link TelescopeSelectionCaret MoonflyGreen
+=======
+    highlight! link TelescopePromptPrefix MoonflyBlue
+    highlight! link TelescopeResultsDiffAdd MoonflyGreen
+    highlight! link TelescopeResultsDiffChange MoonflyRed
+    highlight! link TelescopeResultsSpecialComment MoonflyGrey241
+    highlight! link TelescopeSelectionCaret MoonflyCrimson
+    exec 'highlight TelescopeSelection ctermbg=' . s:grey0.term . ' ctermfg=' . s:grey253.term . ' guibg=' . s:grey0.hex . ' guifg=' . s:grey253.hex
+>>>>>>> 7f2713a6058cc354cc7b48af3450db5e232fd5d3
 
     " gitsigns.nvim plugin
     highlight! link GitSignsAdd MoonflyEmeraldAlert
@@ -863,7 +884,13 @@ if has('nvim')
     highlight! link GitSignsChangeDelete MoonflyCoralAlert
     highlight! link GitSignsDelete MoonflyRedAlert
 
-    " barbar.nvim plugin
+    " Hop plugin
+    highlight! link HopNextKey MoonflyYellow
+    highlight! link HopNextKey1 MoonflyBlue
+    highlight! link HopNextKey2 MoonflyCrimson
+    highlight! link HopUnmatched MoonflyGrey247
+
+    " Barbar plugin
     exec 'highlight BufferCurrent      ctermbg=' . s:grey234.term . ' ctermfg=' . s:white.term . ' guibg=' . s:grey234.hex . ' guifg=' . s:white.hex
     exec 'highlight BufferCurrentMod   ctermbg=' . s:grey234.term . ' ctermfg=' . s:wheat.term . '  guibg=' . s:grey234.hex . ' guifg=' . s:wheat.hex
     exec 'highlight BufferCurrentSign  ctermbg=' . s:grey234.term . ' ctermfg=' . s:blue.term . '   guibg=' . s:grey234.hex . ' guifg=' . s:blue.hex
