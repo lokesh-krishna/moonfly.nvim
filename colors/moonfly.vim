@@ -42,7 +42,7 @@ let g:moonflyNormalFloat = get(g:, 'moonflyNormalFloat', 0)
 
 " Background and foreground
 let s:black     = {"hex": '#080808', "term": 232}
-let s:white     = {"hex": '#c6c6c6', "term": 251}
+let s:white     = {"hex": '#dadada', "term": 251}
 " Variations of charcoal-grey
 let s:grey0     = {"hex": '#323437', "term": 0  }
 let s:grey253   = {"hex": '#dadada', "term": 253}
@@ -111,7 +111,7 @@ endif
 
 " Custom moonfly highlight groups
 exec 'highlight MoonflyReset ctermfg=fg guifg=fg'
-exec 'highlight MoonflyVisual ctermbg=' . s:grey0.term . ' guibg=' . s:grey0.hex
+exec 'highlight MoonflyVisual ctermbg=' . s:grey0.term . ' guibg=' . s:grey236.hex
 exec 'highlight MoonflyWhite ctermfg=' . s:white.term . ' guifg=' . s:white.hex
 exec 'highlight MoonflyGrey0 ctermfg=' . s:grey0.term . ' guifg=' . s:grey0.hex
 exec 'highlight MoonflyGrey247 ctermfg=' . s:grey247.term . ' guifg=' . s:grey247.hex
@@ -225,8 +225,8 @@ end
 
 " Visual selection
 highlight! link Visual MoonflyVisual
-exec 'highlight VisualNOS ctermbg=' . s:grey0.term . ' ctermfg=fg cterm=none guibg=' . s:grey0.hex . ' guifg=fg gui=none'
-exec 'highlight VisualInDiff ctermbg=' . s:grey0.term . ' ctermfg=' . s:white.term . ' guibg=' . s:grey0.hex . ' guifg=' . s:white.hex
+exec 'highlight VisualNOS ctermbg=' . s:grey0.term . ' ctermfg=fg cterm=none guibg=' . s:grey236.hex . ' guifg=fg gui=none'
+exec 'highlight VisualInDiff ctermbg=' . s:grey0.term . ' ctermfg=' . s:white.term . ' guibg=' . s:grey236.hex . ' guifg=' . s:white.hex
 
 " Errors, warnings and whitespace-eol
 exec 'highlight Error ctermbg=bg ctermfg=' . s:red.term . ' guibg=bg guifg=' . s:red.hex
@@ -292,7 +292,7 @@ if has('nvim')
     exec 'highlight Whitespace ctermfg=' . s:grey235.term . ' guifg=' . s:grey235.hex
     exec 'highlight TermCursor ctermbg=' . s:grey247.term . ' ctermfg=bg cterm=none guibg=' . s:grey247.hex . ' guifg=bg gui=none'
     if g:moonflyNormalFloat
-        exec 'highlight NormalFloat ctermbg=bg ctermfg=' . s:grey249.term . ' guibg=bg guifg=' . s:grey249.hex
+        exec 'highlight NormalFloat ctermbg=bg ctermfg=' . s:grey249.term . ' guibg=bg guifg=' . s:grey253.hex
     endif
     exec 'highlight FloatBorder ctermbg=bg ctermfg=' . s:grey236.term . ' guibg=bg guifg=' . s:grey236.hex
 
@@ -706,8 +706,8 @@ highlight! link NERDTreeLinkDir MoonflyBlue
 highlight! link NERDTreeLinkFile MoonflyBlue
 highlight! link NERDTreeLinkTarget MoonflyTurquoise
 highlight! link NERDTreeOpenable MoonflyGreen
-highlight! link NERDTreePart MoonflyGrey0
-highlight! link NERDTreePartFile MoonflyGrey0
+highlight! link NERDTreePart MoonflyGrey236
+highlight! link NERDTreePartFile MoonflyGrey236
 highlight! link NERDTreeUp MoonflyBlue
 
 " NERDTree Git plugin
@@ -736,7 +736,7 @@ highlight! link bufExplorerSortBy MoonflyGrey247
 highlight! link CleverFDefaultLabel MoonflyCrimson
 highlight! link CtrlPMatch MoonflyCoral
 highlight! link Directory MoonflyEmerald
-highlight! link HighlightedyankRegion MoonflyGrey0
+highlight! link HighlightedyankRegion MoonflyGrey236
 highlight! link jsonKeyword MoonflySky
 highlight! link jsonQuote MoonflyWhite
 highlight! link netrwClassify MoonflyCranberry
@@ -792,7 +792,7 @@ highlight! link SignifySignDelete MoonflyRedAlert
 exec 'highlight fzf1 ctermfg=' . s:crimson.term . ' ctermbg=' . s:grey236.term . ' guifg=' . s:crimson.hex . ' guibg=' . s:grey236.hex
 exec 'highlight fzf2 ctermfg=' . s:blue.term . ' ctermbg=' . s:grey236.term . ' guifg=' . s:blue.hex . ' guibg=' . s:grey236.hex
 exec 'highlight fzf3 ctermfg=' . s:emerald.term . ' ctermbg=' . s:grey236.term . ' guifg=' . s:emerald.hex . ' guibg=' . s:grey236.hex
-exec 'highlight fzfNormal ctermfg=' . s:grey249.term . ' guifg=' . s:grey249.hex
+exec 'highlight fzfNormal ctermfg=' . s:grey249.term . ' guifg=' . s:grey253.hex
 exec 'highlight fzfFgPlus ctermfg=' . s:grey253.term . ' guifg=' . s:grey253.hex
 exec 'highlight fzfBorder ctermfg=' . s:grey236.term . ' guifg=' . s:grey236.hex
 let g:fzf_colors = {
@@ -836,7 +836,7 @@ if has('nvim')
     highlight! link LspDiagnosticsVirtualTextHint MoonflyGrey241
     highlight! link LspDiagnosticsSignHint MoonflyWhiteAlert
     highlight! link LspDiagnosticsFloatingHint MoonflyWhite
-    highlight! link LspSignatureActiveParameter MoonflyGrey0
+    highlight! link LspSignatureActiveParameter MoonflyGrey236
 
     " nvim-tree.lua plugin
     highlight! link NvimTreeFolderIcon MoonflyGrey247
