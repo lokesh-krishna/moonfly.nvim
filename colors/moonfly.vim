@@ -706,15 +706,12 @@ highlight! link NERDTreeHelp MoonflyGrey247
 highlight! link NERDTreeLinkDir MoonflyBlue
 highlight! link NERDTreeLinkFile MoonflyBlue
 highlight! link NERDTreeLinkTarget MoonflyTurquoise
-<<<<<<< HEAD
 highlight! link NERDTreeOpenable MoonflyGreen
 highlight! link NERDTreePart MoonflyGrey236
 highlight! link NERDTreePartFile MoonflyGrey236
-=======
 highlight! link NERDTreeOpenable MoonflyEmerald
 highlight! link NERDTreePart MoonflyGrey0
 highlight! link NERDTreePartFile MoonflyGrey0
->>>>>>> 7f2713a6058cc354cc7b48af3450db5e232fd5d3
 highlight! link NERDTreeUp MoonflyBlue
 
 " NERDTree Git plugin
@@ -864,17 +861,14 @@ if has('nvim')
     highlight! link TelescopeMultiSelection MoonflyCrimson
     highlight! link TelescopeNormal MoonflyGrey249
     highlight! link TelescopePreviewMatch MoonflyVisual
-<<<<<<< HEAD
     highlight! link TelescopePromptPrefix MoonflyViolet
     highlight! link TelescopeSelectionCaret MoonflyGreen
-=======
     highlight! link TelescopePromptPrefix MoonflyBlue
     highlight! link TelescopeResultsDiffAdd MoonflyGreen
     highlight! link TelescopeResultsDiffChange MoonflyRed
     highlight! link TelescopeResultsSpecialComment MoonflyGrey241
     highlight! link TelescopeSelectionCaret MoonflyCrimson
     exec 'highlight TelescopeSelection ctermbg=' . s:grey0.term . ' ctermfg=' . s:grey253.term . ' guibg=' . s:grey0.hex . ' guifg=' . s:grey253.hex
->>>>>>> 7f2713a6058cc354cc7b48af3450db5e232fd5d3
 
     " gitsigns.nvim plugin
     highlight! link GitSignsAdd MoonflyEmeraldAlert
