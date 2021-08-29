@@ -11,7 +11,7 @@ local colors = {
 	white		= '#c6c6c6',
 	red		= '#ff5189',
 	violet		= '#d183e8',
-	grey		= '#1c1c1c',
+	grey		= '#303030',
 }
 
 -- LuaFormatter on
