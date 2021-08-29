@@ -17,7 +17,7 @@ local colors = {
 -- LuaFormatter on
 return {
 	normal = {
-		a = {fg = colors.black, bg = colors.violet, gui = 'bold'},
+		a = {fg = colors.black, bg = colors.violet},
 		b = {fg = colors.white, bg = colors.grey},
 		c = {fg = colors.black, bg = colors.black},
 		x = {fg = colors.white, bg = colors.black},
@@ -26,7 +26,7 @@ return {
 	},
 
 	insert = {
-		a = {fg = colors.black, bg = colors.blue, gui = 'bold'},
+		a = {fg = colors.black, bg = colors.blue},
 		b = {fg = colors.white, bg = colors.grey},
 		c = {fg = colors.black, bg = colors.black},
 		x = {fg = colors.white, bg = colors.black},
@@ -35,7 +35,7 @@ return {
 	},
 
 	visual = {
-		a = {fg = colors.black, bg = colors.cyan, gui = 'bold'},
+		a = {fg = colors.black, bg = colors.cyan},
 		b = {fg = colors.white, bg = colors.grey},
 		c = {fg = colors.black, bg = colors.black},
 		x = {fg = colors.white, bg = colors.black},
@@ -44,7 +44,7 @@ return {
 	},
 
 	replace = {
-		a = {fg = colors.black, bg = colors.red, gui = 'bold'},
+		a = {fg = colors.black, bg = colors.red},
 		b = {fg = colors.white, bg = colors.grey},
 		c = {fg = colors.black, bg = colors.black},
 		x = {fg = colors.white, bg = colors.dark_grey},
@@ -53,10 +53,10 @@ return {
 	},
 
 	inactive = {
-		a = {fg = colors.white, bg = colors.grey, gui = 'bold'},
+		a = {fg = colors.white, bg = colors.grey},
 		b = {fg = colors.white, bg = colors.grey},
 		c = {fg = colors.black, bg = colors.black},
-		x = {fg = colors.white, bg = colors.dark_grey},
+		x = {fg = colors.white, bg = colors.black},
 	    	y = {fg = colors.white, bg = colors.grey},
 		z = {fg = colors.white, bg = colors.grey},
   	}
