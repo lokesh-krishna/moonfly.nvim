@@ -53,12 +53,12 @@ return {
 	},
 
 	inactive = {
-		a = {fg = colors.white, bg = colors.grey},
-		b = {fg = colors.white, bg = colors.grey},
+		a = {fg = colors.white, bg = colors.black},
+		b = {fg = colors.white, bg = colors.black},
 		c = {fg = colors.black, bg = colors.black},
 		x = {fg = colors.white, bg = colors.black},
-	    	y = {fg = colors.white, bg = colors.grey},
-		z = {fg = colors.white, bg = colors.grey},
+	    	y = {fg = colors.white, bg = colors.black},
+		z = {fg = colors.white, bg = colors.black},
   	}
 }
 
