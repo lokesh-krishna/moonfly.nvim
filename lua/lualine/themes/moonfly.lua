@@ -20,7 +20,7 @@ return {
 	normal = {
 		a = {fg = colors.black, bg = colors.violet, gui = 'bold'},
 		b = {fg = colors.white, bg = colors.grey},
-		c = {fg = colors.white, bg = colors.dark_grey},
+		c = {fg = colors.black, bg = colors.black},
 		x = {fg = colors.white, bg = colors.dark_grey},
 		y = {fg = colors.white, bg = colors.grey},
 		z = {fg = colors.black, bg = colors.violet},
@@ -29,7 +29,7 @@ return {
 	insert = {
 		a = {fg = colors.black, bg = colors.blue, gui = 'bold'},
 		b = {fg = colors.white, bg = colors.grey},
-		c = {fg = colors.white, bg = colors.dark_grey},
+		c = {fg = colors.black, bg = colors.black},
 		x = {fg = colors.white, bg = colors.dark_grey},
 		y = {fg = colors.white, bg = colors.grey},
 		z = {fg = colors.black, bg = colors.blue},
@@ -38,7 +38,7 @@ return {
 	visual = {
 		a = {fg = colors.black, bg = colors.cyan, gui = 'bold'},
 		b = {fg = colors.white, bg = colors.grey},
-		c = {fg = colors.white, bg = colors.dark_grey},
+		c = {fg = colors.black, bg = colors.black},
 		x = {fg = colors.white, bg = colors.dark_grey},
 		y = {fg = colors.white, bg = colors.grey},
 		z = {fg = colors.black, bg = colors.cyan},
@@ -47,7 +47,7 @@ return {
 	replace = {
 		a = {fg = colors.black, bg = colors.red, gui = 'bold'},
 		b = {fg = colors.white, bg = colors.grey},
-		c = {fg = colors.white, bg = colors.dark_grey},
+		c = {fg = colors.black, bg = colors.black},
 		x = {fg = colors.white, bg = colors.dark_grey},
 		y = {fg = colors.white, bg = colors.grey},
 		z = {fg = colors.black, bg = colors.red},
@@ -56,9 +56,9 @@ return {
 	inactive = {
 		a = {fg = colors.white, bg = colors.grey, gui = 'bold'},
 		b = {fg = colors.white, bg = colors.grey},
-		c = {fg = colors.white, bg = colors.dark_grey},
+		c = {fg = colors.black, bg = colors.black},
 		x = {fg = colors.white, bg = colors.dark_grey},
-    	y = {fg = colors.white, bg = colors.grey},
+	    	y = {fg = colors.white, bg = colors.grey},
 		z = {fg = colors.white, bg = colors.grey},
   	}
 }
