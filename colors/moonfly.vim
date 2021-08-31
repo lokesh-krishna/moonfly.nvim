@@ -40,7 +40,7 @@ let g:moonflyNormalFloat = get(g:, 'moonflyNormalFloat', 0)
 
 " Background and foreground
 let s:black     = {"hex": '#080808', "term": 232}
-let s:white     = {"hex": '#dadada', "term": 251}
+let s:white     = {"hex": '#c6c6c6', "term": 251}
 " Variations of charcoal-grey
 let s:grey0     = {"hex": '#323437', "term": 0  }
 let s:grey253   = {"hex": '#dadada', "term": 253}
@@ -132,6 +132,7 @@ exec 'highlight MoonflyCranberry ctermfg=' . s:cranberry.term . ' guifg=' . s:cr
 exec 'highlight MoonflyViolet ctermfg=' . s:violet.term . ' guifg=' . s:violet.hex
 exec 'highlight MoonflyCrimson ctermfg=' . s:crimson.term . ' guifg=' . s:crimson.hex
 exec 'highlight MoonflyRed ctermfg=' . s:red.term . ' guifg=' . s:red.hex
+exec 'highlight MoonflyItalics ctermfg=' . s:red.term . ' guifg=' . s:white.hex . ' gui=italic'
 exec 'highlight MoonflyWhiteAlert ctermbg=bg ctermfg=' . s:white.term . ' guibg=bg guifg=' . s:white.hex
 exec 'highlight MoonflyYellowAlert ctermbg=bg ctermfg=' . s:yellow.term . ' guibg=bg guifg=' . s:yellow.hex
 exec 'highlight MoonflyCoralAlert ctermbg=bg ctermfg=' . s:coral.term . ' guibg=bg guifg=' . s:coral.hex
@@ -511,7 +512,7 @@ highlight! link markdownCodeDelimiter MoonflyWheat
 highlight! link markdownError NormalNC
 highlight! link markdownH1 MoonflyOrange
 highlight! link markdownHeadingRule MoonflyBlue
-highlight! link markdownItalic MoonflyViolet
+highlight! link markdownItalic MoonflyItalics
 highlight! link markdownUrl MoonflyPurple
 
 " Markdown, 'plasticboy/vim-markdown' plugin
