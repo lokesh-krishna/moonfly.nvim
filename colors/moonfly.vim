@@ -133,6 +133,7 @@ exec 'highlight MoonflyViolet ctermfg=' . s:violet.term . ' guifg=' . s:violet.h
 exec 'highlight MoonflyCrimson ctermfg=' . s:crimson.term . ' guifg=' . s:crimson.hex
 exec 'highlight MoonflyRed ctermfg=' . s:red.term . ' guifg=' . s:red.hex
 exec 'highlight MoonflyItalics ctermfg=' . s:red.term . ' guifg=' . s:white.hex . ' gui=italic'
+exec 'highlight MoonflyBold ctermfg=' . s:red.term . ' guifg=' . s:white.hex . ' gui=bold'
 exec 'highlight MoonflyWhiteAlert ctermbg=bg ctermfg=' . s:white.term . ' guibg=bg guifg=' . s:white.hex
 exec 'highlight MoonflyYellowAlert ctermbg=bg ctermfg=' . s:yellow.term . ' guibg=bg guifg=' . s:yellow.hex
 exec 'highlight MoonflyCoralAlert ctermbg=bg ctermfg=' . s:coral.term . ' guibg=bg guifg=' . s:coral.hex
@@ -506,7 +507,7 @@ highlight! link luaFuncCall MoonflySky
 highlight! link luaSpecialTable MoonflySky
 
 " Markdown, 'tpope/vim-markdown' plugin
-highlight! link markdownBold MoonflyYellow
+highlight! link markdownBold MoonflyBold
 highlight! link markdownCode MoonflyWheat
 highlight! link markdownCodeDelimiter MoonflyWheat
 highlight! link markdownError NormalNC
