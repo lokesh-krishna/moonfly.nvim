@@ -507,7 +507,7 @@ highlight! link luaFuncCall MoonflySky
 highlight! link luaSpecialTable MoonflySky
 
 " Markdown, 'tpope/vim-markdown' plugin
-highlight! link markdownBold MoonflyBold
+highlight! link markdownBold MoonflyYellow
 highlight! link markdownCode MoonflyWheat
 highlight! link markdownCodeDelimiter MoonflyWheat
 highlight! link markdownError NormalNC
