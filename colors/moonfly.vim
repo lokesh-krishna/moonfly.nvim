@@ -15,28 +15,28 @@ let g:colors_name='moonfly'
 " By default do not color the cursor.
 let g:moonflyCursorColor = get(g:, 'moonflyCursorColor', 0)
 
+" By default do use italics in GUI versions of Vim.
+let g:moonflyItalics = get(g:, 'moonflyItalics', 1)
+
+" By default do not use a customized 'NormalFloat' highlight group (for Neovim
+" floating windows).
+let g:moonflyNormalFloat = get(g:, 'moonflyNormalFloat', 0)
+
 " By default use the moonfly color palette in the `:terminal`
 let g:moonflyTerminalColors = get(g:, 'moonflyTerminalColors', 1)
 
-" By default do not underline matching parentheses.
-let g:moonflyUnderlineMatchParen = get(g:, 'moonflyUnderlineMatchParen', 0)
+" By default do not use a transparent background in GUI versions of Vim.
+let g:moonflyTransparent = get(g:, 'moonflyTransparent', 0)
 
 " By default do use undercurls in GUI versions of Vim, including terminal Vim
 " with termguicolors set.
 let g:moonflyUndercurls = get(g:, 'moonflyUndercurls', 1)
 
-" By default do use italics in GUI versions of Vim.
-let g:moonflyItalics = get(g:, 'moonflyItalics', 1)
-
-" By default do not use a transparent background in GUI versions of Vim.
-let g:moonflyTransparent = get(g:, 'moonflyTransparent', 0)
+" By default do not underline matching parentheses.
+let g:moonflyUnderlineMatchParen = get(g:, 'moonflyUnderlineMatchParen', 0)
 
 " By default do display vertical split columns.
 let g:moonflyVertSplits = get(g:, 'moonflyVertSplits', 1)
-
-" By default do not use a customized 'NormalFloat' highlight group (for Neovim
-" floating windows).
-let g:moonflyNormalFloat = get(g:, 'moonflyNormalFloat', 0)
 
 " Background and foreground
 let s:black     = {"hex": '#080808', "term": 232}
@@ -280,7 +280,8 @@ endif
 exec 'highlight Ignore ctermfg=' . s:sky.term . ' guifg=' . s:sky.hex
 exec 'highlight Underlined ctermfg=' . s:emerald.term . ' cterm=none guifg=' . s:emerald.hex . ' gui=none'
 exec 'highlight QuickFixLine ctermbg=' . s:grey237.term . ' cterm=none guibg=' . s:grey237.hex
-exec 'highlight Delimiter ctermfg=' . s:white.term . ' guifg=' . s:white.hex
+highlight! link Delimiter MoonflyWhite
+highlight! link qfFileName MoonflyEmerald
 
 " Color column (after line 80)
 exec 'highlight ColorColumn ctermbg=' . s:grey233.term . ' guibg=' . s:grey233.hex
@@ -318,6 +319,12 @@ if has('nvim')
     highlight! link TSTagDelimiter MoonflyLime
     highlight! link TSVariableBuiltin MoonflyLime
     highlight! link bashTSParameter MoonflyTurquoise
+    highlight! link cssTSPunctDelimiter MoonflyCranberry
+    highlight! link cssTSType MoonflyBlue
+    highlight! link scssTSPunctDelimiter MoonflyCranberry
+    highlight! link scssTSType MoonflyBlue
+    highlight! link yamlTSField MoonflySky
+    highlight! link yamlTSPunctDelimiter MoonflyCranberry
 endif
 
 " C/C++
@@ -741,8 +748,8 @@ highlight! link bufExplorerHelp MoonflyGrey247
 highlight! link bufExplorerSortBy MoonflyGrey247
 highlight! link CleverFDefaultLabel MoonflyCrimson
 highlight! link CtrlPMatch MoonflyCoral
-highlight! link Directory MoonflyEmerald
-highlight! link HighlightedyankRegion MoonflyGrey236
+highlight! link Directory MoonflyBlue
+highlight! link HighlightedyankRegion MoonflyGrey0
 highlight! link jsonKeyword MoonflySky
 highlight! link jsonQuote MoonflyWhite
 highlight! link netrwClassify MoonflyCranberry
@@ -817,6 +824,9 @@ let g:fzf_colors = {
   \  'header':  ['fg', 'CursorLineNr']
   \}
 
+" Coc plugin
+highlight! link CocUnusedHighlight MoonflyWhite
+
 if has('nvim')
     " Neovim LSP diagnostics
     if g:moonflyUndercurls
@@ -862,9 +872,15 @@ if has('nvim')
     highlight! link TelescopeMatching MoonflyBlue
     highlight! link TelescopeMultiSelection MoonflyCrimson
     highlight! link TelescopeNormal MoonflyGrey249
+    highlight! link TelescopePreviewDate MoonflyGrey246
+    highlight! link TelescopePreviewGroup MoonflyGrey246
+    highlight! link TelescopePreviewLink MoonflyTurquoise
     highlight! link TelescopePreviewMatch MoonflyVisual
     highlight! link TelescopePromptPrefix MoonflyGreen
     highlight! link TelescopeSelectionCaret MoonflyGreen
+    highlight! link TelescopePreviewRead MoonflyOrange
+    highlight! link TelescopePreviewSize MoonflyEmerald
+    highlight! link TelescopePreviewUser MoonflyGrey246
     highlight! link TelescopeResultsDiffAdd MoonflyGreen
     highlight! link TelescopeResultsDiffChange MoonflyRed
     highlight! link TelescopeResultsSpecialComment MoonflyGrey241
@@ -885,14 +901,16 @@ if has('nvim')
     highlight! link HopUnmatched MoonflyGrey247
 
     " Barbar plugin
-    exec 'highlight BufferCurrent      ctermbg=' . s:grey234.term . ' ctermfg=' . s:white.term . ' guibg=' . s:grey234.hex . ' guifg=' . s:white.hex
-    exec 'highlight BufferCurrentMod   ctermbg=' . s:grey234.term . ' ctermfg=' . s:wheat.term . '  guibg=' . s:grey234.hex . ' guifg=' . s:wheat.hex
-    exec 'highlight BufferCurrentSign  ctermbg=' . s:grey234.term . ' ctermfg=' . s:blue.term . '   guibg=' . s:grey234.hex . ' guifg=' . s:blue.hex
+    exec 'highlight BufferCurrent      ctermbg=' . s:grey234.term . ' ctermfg=' . s:white.term . '   guibg=' . s:grey234.hex . ' guifg=' . s:white.hex
+    exec 'highlight BufferCurrentIndex ctermbg=' . s:grey234.term . ' ctermfg=' . s:white.term . '   guibg=' . s:grey234.hex . ' guifg=' . s:white.hex
+    exec 'highlight BufferCurrentMod   ctermbg=' . s:grey234.term . ' ctermfg=' . s:wheat.term . '   guibg=' . s:grey234.hex . ' guifg=' . s:wheat.hex
+    exec 'highlight BufferCurrentSign  ctermbg=' . s:grey234.term . ' ctermfg=' . s:blue.term . '    guibg=' . s:grey234.hex . ' guifg=' . s:blue.hex
     exec 'highlight BufferVisible      ctermbg=' . s:grey234.term . ' ctermfg=' . s:grey246.term . ' guibg=' . s:grey234.hex . ' guifg=' . s:grey246.hex
-    exec 'highlight BufferVisibleMod   ctermbg=' . s:grey234.term . ' ctermfg=' . s:wheat.term . '  guibg=' . s:grey234.hex . ' guifg=' . s:wheat.hex
+    exec 'highlight BufferVisibleIndex ctermbg=' . s:grey234.term . ' ctermfg=' . s:grey246.term . ' guibg=' . s:grey234.hex . ' guifg=' . s:grey246.hex
+    exec 'highlight BufferVisibleMod   ctermbg=' . s:grey234.term . ' ctermfg=' . s:wheat.term . '   guibg=' . s:grey234.hex . ' guifg=' . s:wheat.hex
     exec 'highlight BufferVisibleSign  ctermbg=' . s:grey234.term . ' ctermfg=' . s:grey246.term . ' guibg=' . s:grey234.hex . ' guifg=' . s:grey246.hex
     exec 'highlight BufferInactive     ctermbg=' . s:grey236.term . ' ctermfg=' . s:grey246.term . ' guibg=' . s:grey236.hex . ' guifg=' . s:grey246.hex
-    exec 'highlight BufferInactiveMod  ctermbg=' . s:grey236.term . ' ctermfg=' . s:wheat.term . '  guibg=' . s:grey236.hex . ' guifg=' . s:wheat.hex
+    exec 'highlight BufferInactiveMod  ctermbg=' . s:grey236.term . ' ctermfg=' . s:wheat.term . '   guibg=' . s:grey236.hex . ' guifg=' . s:wheat.hex
     exec 'highlight BufferInactiveSign ctermbg=' . s:grey236.term . ' ctermfg=' . s:grey247.term . ' guibg=' . s:grey236.hex . ' guifg=' . s:grey247.hex
 endif
 
