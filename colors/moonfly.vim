@@ -809,13 +809,8 @@ highlight! link SignifySignDelete MoonflyRedAlert
 exec 'highlight fzf1 ctermfg=' . s:crimson.term . ' ctermbg=' . s:grey236.term . ' guifg=' . s:crimson.hex . ' guibg=' . s:grey236.hex
 exec 'highlight fzf2 ctermfg=' . s:blue.term . ' ctermbg=' . s:grey236.term . ' guifg=' . s:blue.hex . ' guibg=' . s:grey236.hex
 exec 'highlight fzf3 ctermfg=' . s:emerald.term . ' ctermbg=' . s:grey236.term . ' guifg=' . s:emerald.hex . ' guibg=' . s:grey236.hex
-<<<<<<< HEAD
-exec 'highlight fzfNormal ctermfg=' . s:grey249.term . ' guifg=' . s:grey253.hex
-exec 'highlight fzfFgPlus ctermfg=' . s:grey253.term . ' guifg=' . s:grey253.hex
-=======
 exec 'highlight fzfNormal ctermfg=' . s:grey249.term . ' guifg=' . s:grey249.hex
 exec 'highlight fzfFgPlus ctermfg=' . s:grey254.term . ' guifg=' . s:grey254.hex
->>>>>>> fd329a96307342bd5bc7ace1bdd0123327aaf893
 exec 'highlight fzfBorder ctermfg=' . s:grey236.term . ' guifg=' . s:grey236.hex
 let g:fzf_colors = {
   \  'fg':      ['fg', 'fzfNormal'],
@@ -892,12 +887,8 @@ elseif has('nvim-0.5')
     highlight! link LspDiagnosticsFloatingWarning MoonflyYellow
     highlight! link LspDiagnosticsFloatingInformation MoonflySky
     highlight! link LspDiagnosticsFloatingHint MoonflyWhite
-<<<<<<< HEAD
-    highlight! link LspSignatureActiveParameter MoonflyGrey236
-=======
     highlight! link LspSignatureActiveParameter MoonflyGrey0
 endif
->>>>>>> fd329a96307342bd5bc7ace1bdd0123327aaf893
 
 " Neovim only plugins
 if has('nvim')
@@ -931,12 +922,7 @@ if has('nvim')
     highlight! link TelescopeResultsDiffAdd MoonflyGreen
     highlight! link TelescopeResultsDiffChange MoonflyRed
     highlight! link TelescopeResultsSpecialComment MoonflyGrey241
-<<<<<<< HEAD
-    exec 'highlight TelescopeSelection ctermbg=' . s:grey0.term . ' ctermfg=' . s:grey253.term . ' guibg=' . s:grey0.hex . ' guifg=' . s:grey253.hex
-=======
-    highlight! link TelescopeSelectionCaret MoonflyCrimson
     exec 'highlight TelescopeSelection ctermbg=' . s:grey0.term . ' ctermfg=' . s:grey254.term . ' guibg=' . s:grey0.hex . ' guifg=' . s:grey254.hex
->>>>>>> fd329a96307342bd5bc7ace1bdd0123327aaf893
 
     " gitsigns.nvim plugin
     highlight! link GitSignsAdd MoonflyEmeraldAlert
