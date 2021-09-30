@@ -41,6 +41,7 @@ Styled Features & Plugins
 - [lightline](https://github.com/itchyny/lightline.vim)
 - [Lualine](https://github.com/hoob3rt/lualine.nvim)
 - [NERDTree](https://github.com/scrooloose/nerdtree)
+- [nvim-cmp](https://github.com/hrsh7th/nvim-cmp)
 - [NvimTree](https://github.com/kyazdani42/nvim-tree.lua)
 - [Signify](https://github.com/mhinz/vim-signify)
 - [Telescope](https://github.com/nvim-telescope/telescope.nvim)
@@ -354,7 +355,7 @@ For other terminals please configure appropriately with the following colors:
 | Color 13       | Blue (bright)   | `#74b2ff` | ![background](https://via.placeholder.com/32/74b2ff?text=+) |
 | Color 14       | Purple (bright) | `#ae81ff` | ![background](https://via.placeholder.com/32/ae81ff?text=+) |
 | Color 15       | Cyan (bright)   | `#85dc85` | ![background](https://via.placeholder.com/32/85dc85?text=+) |
-| Color 16       | White (bright)  | `#dadada` | ![background](https://via.placeholder.com/32/dadada?text=+) |
+| Color 16       | White (bright)  | `#e4e4e4` | ![background](https://via.placeholder.com/32/e4e4e4?text=+) |
 
 :tv: Legacy 256 Color Terminals
 -------------------------------
@@ -403,4 +404,4 @@ Color 16 (Bright White):  #e2637f
 License
 -------
 
-[MIT](https://opensource.org/licenses/MIT)
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
