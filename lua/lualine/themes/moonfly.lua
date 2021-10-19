@@ -14,6 +14,7 @@ local colors = {
   violet    = '#d183e8',
   grey	    = '#303030',
   yellow    = '#e3c78a',
+  darkgrey  = '#1c1c1c',
 }
 
 -- LuaFormatter on
@@ -21,8 +22,8 @@ return {
 	normal = {
 		a = {fg = colors.black, bg = colors.blue},
 		b = {fg = colors.white, bg = colors.grey},
-		c = {fg = colors.black, bg = colors.black},
-		x = {fg = colors.white, bg = colors.black},
+		c = {fg = colors.white, bg = colors.darkgrey},
+		x = {fg = colors.white, bg = colors.darkgrey},
 		y = {fg = colors.white, bg = colors.grey},
 		z = {fg = colors.black, bg = colors.blue},
 	},
@@ -30,8 +31,8 @@ return {
 	insert = {
 		a = {fg = colors.black, bg = colors.green},
 		b = {fg = colors.white, bg = colors.grey},
-		c = {fg = colors.black, bg = colors.black},
-		x = {fg = colors.white, bg = colors.black},
+		c = {fg = colors.white, bg = colors.darkgrey},
+		x = {fg = colors.white, bg = colors.darkgrey},
 		y = {fg = colors.white, bg = colors.grey},
 		z = {fg = colors.black, bg = colors.green},
 	},
@@ -39,8 +40,8 @@ return {
 	visual = {
 		a = {fg = colors.black, bg = colors.yellow},
 		b = {fg = colors.white, bg = colors.grey},
-		c = {fg = colors.black, bg = colors.black},
-		x = {fg = colors.white, bg = colors.black},
+		c = {fg = colors.white, bg = colors.darkgrey},
+		x = {fg = colors.white, bg = colors.darkgrey},
 		y = {fg = colors.white, bg = colors.grey},
 		z = {fg = colors.black, bg = colors.yellow},
 	},
@@ -48,8 +49,8 @@ return {
 	replace = {
 		a = {fg = colors.black, bg = colors.red},
 		b = {fg = colors.white, bg = colors.grey},
-		c = {fg = colors.black, bg = colors.black},
-		x = {fg = colors.white, bg = colors.dark_grey},
+		c = {fg = colors.white, bg = colors.darkgrey},
+		x = {fg = colors.white, bg = colors.darkgrey},
 		y = {fg = colors.white, bg = colors.grey},
 		z = {fg = colors.black, bg = colors.red},
 	},
