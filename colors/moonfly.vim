@@ -861,7 +861,7 @@ if has('nvim-0.6')
     highlight! link DiagnosticFloatingWarn MoonflyYellow
     highlight! link DiagnosticFloatingInfo MoonflySky
     highlight! link DiagnosticFloatingHint MoonflyWhite
-    highlight! link LspSignatureActiveParameter MoonflyGrey0
+    highlight! link LspSignatureActiveParameter MoonflyVisual
 elseif has('nvim-0.5')
     " Neovim 0.5 LSP diagnostics
     if g:moonflyUndercurls
@@ -887,7 +887,7 @@ elseif has('nvim-0.5')
     highlight! link LspDiagnosticsFloatingWarning MoonflyYellow
     highlight! link LspDiagnosticsFloatingInformation MoonflySky
     highlight! link LspDiagnosticsFloatingHint MoonflyWhite
-    highlight! link LspSignatureActiveParameter MoonflyGrey0
+    highlight! link LspSignatureActiveParameter MoonflyVisual
 endif
 
 " Neovim only plugins
@@ -922,6 +922,7 @@ if has('nvim')
     highlight! link TelescopeResultsDiffAdd MoonflyGreen
     highlight! link TelescopeResultsDiffChange MoonflyRed
     highlight! link TelescopeResultsSpecialComment MoonflyGrey241
+    highlight! link TelescopeTitle MoonflyGrey241
     exec 'highlight TelescopeSelection ctermbg=' . s:grey0.term . ' ctermfg=' . s:grey254.term . ' guibg=' . s:grey0.hex . ' guifg=' . s:grey254.hex
 
     " gitsigns.nvim plugin
@@ -955,7 +956,7 @@ if has('nvim')
     highlight! link CmpItemAbbrMatch MoonflyGrey254
     highlight! link CmpItemAbbrMatchFuzzy MoonflyCoral
     highlight! link CmpItemKind MoonflyBlue
-    highlight! link CmpItemMenu MoonflyWhite
+    highlight! link CmpItemMenu MoonflyGrey247
 endif
 
 set background=dark
